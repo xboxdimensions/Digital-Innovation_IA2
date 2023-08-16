@@ -7,7 +7,8 @@ Some specifications:
 
 You are required to build a prototype IoT system that allows users to:
 
-- view Bureau of Meteorology (BOM) data stored in an SQLite database•view Arduino sensor data stored in an SQLite database
+- view Bureau of Meteorology (BOM) data stored in an SQLite database
+- view Arduino sensor data stored in an SQLite database
 - receive alerts (via the user interface)•adjust alert thresholds.
 
 ### The IoT system to be developed must:
