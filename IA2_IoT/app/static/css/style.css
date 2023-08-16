@@ -1,0 +1,108 @@
+.display-title {
+    margin: .25em 0;
+    font-weight: 400;
+    font-size: 3.6rem;
+    font-style: normal;
+    color: inherit;
+    line-height: .8;
+    text-transform: uppercase;
+    letter-spacing: 0
+}
+html{
+font-family: Roboto;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.title{
+    padding-right: 20px;
+}
+.Box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #000000;
+}
+.Stuff{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+.Bottom{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+.status{
+    padding-left:250px;
+    align-items: center;
+    font-size: 4em;
+}
+.big_important{
+    margin-block-end: 10px;
+    margin-block-start: 10px;
+    font-size: 5rem;
+}
+.BACK{
+    background-color: #000000;
+    color:#ffffff;
+    text-decoration: none;
+    font-size: 3rem;
+    margin-left: 40px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: ease .3s;
+    display: inline-block;
+    padding: 12px 24px;
+}
+tr{
+    height: 40px;
+}
+td{
+    font-size: 1.2em;
+}
+img{
+    padding-right: 30px;
+}
+.Submit {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #646464;
+    font-weight: bold;
+    color:#ffffff;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: ease .3s;
+    font-size: 3em;
+    margin-left: 400px;
+  }
+  .label-txt {
+    position: absolute;
+    top: -1.6em;
+    padding: 10px;
+    font-size: .8em;
+    letter-spacing: 1px;
+    color:#000000;
+    transition: ease .3s;
+  }
+  .input {
+    width: 100%;
+    padding: 5px;
+    background: transparent;
+    outline: none;
+  }

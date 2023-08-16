@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{title}}</title>
+  <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/ico" href="static/images/favicon.ico">
+</head>
+<body>
+  <div class="header">
+    <a href="/"><img src="/static/images/hih-b.png" alt="UAP" height="90px" width="90px"></a>
+    <h1 class="title">
+      {{bigtitle}}
+    </h1>
+  </div>
+  {% block content %}
+  {% endblock %}
+</body>
+</html>

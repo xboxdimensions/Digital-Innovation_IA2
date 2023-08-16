@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+<head>
+    <meta http-equiv="refresh" content="1800;">
+</head>
+<div class="Stuff">
+    <div id="info">
+        <h3>Humiditiy:</h3>
+        <li>Inside: {{int_info[0][1]}}%</li>
+        <li>Outside: {{tempinfo[0][2]}}%</li>
+        <h3>Current Threshold:</h3>
+        <li>Inside Temp: {{MaxInt}}°C</li>
+        <li>Outside Temp: {{MaxOut}}°C</li>
+    </div>
+    {% if tempinfo[0][1] > MaxOut or int_info[0][0] > MaxInt %}
+    <div class="Box" style="background-color:#FF0000;">
+        <h2>Current In/Out Temperatures:</h2>
+        <h1 class="big_important">{{int_info[0][0]}}/{{tempinfo[0][0]}}°C</h1>
+        <h4>Feels like {{tempinfo[0][1]}}°C</h4>
+    </div>
+    {% else %}
+    <div class="Box" style="background-color:#00FF00;">
+        <h2>Current In/Out Temperatures:</h2>
+        <h1 class="big_important">{{int_info[0][0]}}/{{tempinfo[0][0]}}°C</h1>
+        <h4>Feels like {{tempinfo[0][1]}}°C</h4>
+    </div>
+    {% endif %}
+    {% if tempinfo[0][1] > MaxOut or int_info[0][0] > MaxInt %}
+    <img src="/static/images/hypershock.png" alt="Alert" height="200px" width="200px">
+    {% else %}
+    <img src="/static/images/goodjob.png" alt="NoAlert" height="200px" width="200px">
+    {% endif %}
+</div>
+<div class="Bottom"><a class="BACK" href="settings">ADJUST</a>
+    {% if tempinfo[0][1] > MaxOut or int_info[0][0] > MaxInt %}
+    <h1 class="status"><center>Unsafe<br>Temperature</center></h1>
+    {% else %}
+    <h1 class="status"><center>Safe<br>Temperature</center></h1>
+    {% endif %}
+</div>
+{% endblock %} 

@@ -1,0 +1,24 @@
+{% extends "base.html" %}{% block content %}
+<center>
+    {% if message != "" %}
+    <h1 style="color: #FF0000;">{{message}}</h1>{%else%}
+    <h1>Input new threshold values below</h1>{%endif%}
+    <form action="/setthresh" method="POST" novalidate>
+        {{Form.hidden_tag()}}
+        <table>
+            <tr>
+                <td>{{Form.MaxInt.label(class_="label")}}</td>
+                <td>{{Form.MaxInt(class_="input")}}</td>
+            </tr>
+            <tr>
+                <td>{{Form.MaxOut.label(class_="label")}}</td>
+                <td>{{Form.MaxOut(class_="input")}}</td>
+            </tr>
+        </table><br><br>
+        <div class="Bottom">
+            <a class="BACK" href="/">BACK</a>
+            {{Form.Submit(class_="Submit")}}
+        </div>
+    </form>
+</center>
+{% endblock %}
